@@ -34,7 +34,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-    
+
+      # テスト用サーバの起動
+      - name: Run SSE Server
+        run: |
+          python server/sse.py &
+
       # テストを実行する
       - name: UnitTest
         run: |
