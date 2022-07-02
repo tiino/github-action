@@ -15,7 +15,7 @@ on:
 # ジョブの定義
 jobs:
   unittest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       # ワークフローがリポジトリにアクセスできるようにチェックアウトする
