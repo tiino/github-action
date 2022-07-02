@@ -1,0 +1,42 @@
+name: Run Unittest
+
+# トリガーの指定
+# main及びdevelopにpush時にテストを実行する
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ワークフローがリポジトリにアクセスできるようにチェックアウトする
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      # Python環境のセットアップ
+      - name: Set up Python 3.8
+        uses: action/setup-python@v2
+        with:
+          python-version: 3.8
+
+      # 必要なライブラリのインストール
+      - name: Install dependencies
+        # コマンドを複数行記述したい場合は「|」を使う
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+    
+      # テストを実行する
+      - name: UnitTest
+        run: |
+          python test/test_sample.py
+        continue-on-error: true
