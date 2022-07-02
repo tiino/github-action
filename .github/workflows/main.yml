@@ -39,4 +39,4 @@ jobs:
       - name: UnitTest
         run: |
           python test/test_sample.py
-        continue-on-error: true
+        continue-on-error: false
