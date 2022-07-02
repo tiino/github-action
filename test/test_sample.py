@@ -31,6 +31,26 @@ class TestSample(unittest.TestCase):
 
         self.assertEqual(res, exp)
 
+    def test_function_c(self):
+        from src.sample import function_c
+        a = 3
+        b = 2
+
+        exp = 6
+        res = function_c(a, b)
+
+        self.assertEqual(res, exp)
+
+    def test_function_d(self):
+        from src.sample import function_d
+        a = 3
+        b = 2
+
+        exp = 1.5
+        res = function_d(a, b)
+
+        self.assertEqual(res, exp)
+
     def test_post(self):
         url = 'http://localhost:8787/sse'
         exp = {'val_1': 1, 'val_2': 2}
