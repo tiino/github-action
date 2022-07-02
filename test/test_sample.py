@@ -31,13 +31,13 @@ class TestSample(unittest.TestCase):
 
         self.assertEqual(res, exp)
 
-    def test_post(self):
-        url = 'http://localhost:8787/sse'
-        exp = {'val_1': 1, 'val_2': 2}
+    # def test_post(self):
+    #     url = 'http://localhost:8787/sse'
+    #     exp = {'val_1': 1, 'val_2': 2}
 
-        response = requests.post(url, data='{"val_1": 1, "val_2": 2}')
+    #     response = requests.post(url, data='{"val_1": 1, "val_2": 2}')
 
-        self.assertDictEqual(response.json(), exp)
+    #     self.assertDictEqual(response.json(), exp)
 
 
 if __name__ == '__main__':
