@@ -16,3 +16,7 @@ def function_f(a):
 
 def function_d(a, b):
     return a / b
+
+
+def function_e(a):
+    return a ** 2
