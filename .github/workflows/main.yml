@@ -3,10 +3,6 @@ name: Run Unittest
 # トリガーの指定
 # main及びdevelopにpush時にテストを実行する
 on:
-  push:
-    branches:
-      - main
-      - develop
   pull_request:
     branches:
       - main
