@@ -46,8 +46,7 @@ class TestSample(unittest.TestCase):
         a = 3
         b = 2
 
-        # exp = 1.5
-        exp = 2.0
+        exp = 1.5
         res = function_d(a, b)
 
         self.assertEqual(res, exp)
