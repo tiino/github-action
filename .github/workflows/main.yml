@@ -2,11 +2,7 @@ name: Run Unittest
 
 # トリガーの指定
 # main及びdevelopにpush時にテストを実行する
-on:
-  pull_request:
-    branches:
-      - main
-      - develop
+on: [push]
 
 # ジョブの定義
 jobs:
